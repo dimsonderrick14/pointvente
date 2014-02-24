@@ -72,5 +72,14 @@ class PointVenteController {
         render resultat as grails.converters.JSON
     }
 
+    def visualiserPointVente = {
+
+        String latparam = params.latparam
+        String lngparam = params.lngparam
+        String rayon = params.rayon
+
+        [latparam: latparam, lngparam: lngparam, rayon: rayon]
+    }
+
 
 }
