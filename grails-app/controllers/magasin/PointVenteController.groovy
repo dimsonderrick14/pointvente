@@ -61,4 +61,16 @@ class PointVenteController {
         }
     }
 
+    def recherchePointVente = {
+
+        String latparam = params.latparam
+        String lngparam = params.lngparam
+        String rayon = params.rayon
+
+        def resultat = pointVenteService.recherchePointVente(latparam, lngparam, rayon)
+
+        render resultat as grails.converters.JSON
+    }
+
+
 }
