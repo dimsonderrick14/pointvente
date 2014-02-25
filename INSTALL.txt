@@ -1,3 +1,5 @@
+La formule Haversine sera utilisée pour le géocodage du fichier de point de vente : 
+
 1. INSTALLATION
 =============================================================================
 
@@ -10,4 +12,16 @@
 =============================================================================
 
 --Étant donné que l'api de géocodage de google met certaines limites sur l'utilisation de sa librairie; dans le fichier magasin/PointVenteController.groovy , j'ai configuré un flag tentativeConnection (idéalement à déplacer dans un fichier de propriété) qui éviterait de tourner en boucle au cas où l'api de geocodate ne marcherait pas
+--Sauvegarde des points de vente
+   http://localhost:8080/magasin/pointVente/sauverPointVente
+--Visualisation des points de vente
+   mode normal
+   http://localhost:8080/magasin/pointVente/visualiserPointVente
+   mode forcé
+   http://localhost:8080/magasin/pointVente/visualiserPointVente?latparam=49&lngparam=4&rayon=25
+   
 
+3. TODO
+=============================================================================
+
+--Rendre le code plus robuste en traitant les différents cas d'erreur.
