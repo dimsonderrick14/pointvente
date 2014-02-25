@@ -1,0 +1,13 @@
+1. INSTALLATION
+=============================================================================
+
+--créer la base de donnée "marker"
+--configurer vos paramètres de connexion dans le fichier grails-app/conf/DataSource.groovy (segment dataSource)
+--placer dans le fichier grails-app/conf/resources/Testtechnique.csv (séparateur de colonne ";") vos points de vente à importer
+
+
+2. UTILISATION
+=============================================================================
+
+--Étant donné que l'api de géocodage de google met certaines limites sur l'utilisation de sa librairie; dans le fichier magasin/PointVenteController.groovy , j'ai configuré un flag tentativeConnection (idéalement à déplacer dans un fichier de propriété) qui éviterait de tourner en boucle au cas où l'api de geocodate ne marcherait pas
+
