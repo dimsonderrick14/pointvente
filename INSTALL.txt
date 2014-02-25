@@ -1,4 +1,4 @@
-La formule Haversine sera utilisée pour le géocodage du fichier de point de vente : 
+La formule Haversine sera utilisée pour le géocodage du fichier de point de vente 
 
 1. INSTALLATION
 =============================================================================
