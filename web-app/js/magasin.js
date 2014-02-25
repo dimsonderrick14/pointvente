@@ -41,10 +41,9 @@ function nettoyerPointVentes() {
     markers.length = 0;
 }
 function rechercherPointVenteAproximite(rayon, center) {
-    nettoyerPointVentes();
-    // todo on affiche aussi la position de l'internaute
-    // creer un marker particulier pour lui
-    creerMarker(center, 'la position de internaute');
+     nettoyerPointVentes();
+    // todo creer un marker particulier avec une autre image
+    creerMarker(center, 'la position forcée ou normale de internaute','adresse forcée ou normale de internaute' ,0);
     $.getJSON('/magasin/pointVente/recherchePointVente?latparam=' + center.lat() + '&lngparam=' + center.lng() + '&rayon=' + rayon, function (data) {
         var bounds = new google.maps.LatLngBounds();
         $.each(data, function (key, val) {
